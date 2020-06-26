@@ -12,16 +12,19 @@
     --text-a-hover: #db4d52;
     --text-mark: #D3FFA4;
     --text-code: #04133b;
-    --pre-code: #FFFFFF;
+    --pre-code: #ffffff80;
     --blockquotes: #0995f3;
     --interactive-accent: #92A1A1;
     --interactive-before: #65605e;
     --blockquote-border: #8bd3dd;
-    --tag-background: #ff8906;
+    --tag-background: #e44404d5;
+    --text-tag:#f8f8fa;
     --interactive-accent-rgb: #db4d52;
     --font-family-editor: SF Pro Display, "SF Pro Display";
     --font-family-preview: SF Pro Display, "SF Pro Display";
     --font-family-code: Fira Code, "Fira Code";
+    --font-family-quotes: American Typewriter,
+    "American Typewriter";
 }
 
 /* Editor Headline */
@@ -123,6 +126,62 @@
     color: var(--text-headline-h5);
 }
 
+/* add some header suffix in preview */
+h1::after {
+    content: 'H1 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h2::after {
+    content: 'H2 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h3::after {
+    content: 'H3 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h4::after {
+    content: 'H4 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h5::after {
+    content: 'H5 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h6::after {
+    content: 'H6 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+
+}
+
 
 /* Links */
 a,
@@ -167,24 +226,38 @@ blockquote
     border-top-width: 0px !important;
     border-bottom-width: 0px !important;
     border-right-width: 0px !important;
-    border-left-width: 2px !important;
+    border-left-width: 0px !important;
     font-style: italic !important;
     color: var(--text-quotes) !important;
     font-size: medium;
-    font-weight: bold;
+    quotes:"\201C""\201D""\2018""\2019";
+    background:#F7F9F9;
+    font-family: var(--font-family-quotes);
 }
 
 
-/* blockquote::before {
-    padding-bottom: -60px;
-    border-bottom-width: 0px !important;
-    content: '“';
-    font-size: 60px;
-    margin:-0px -0px -100px -30px;
-    color: var(--blockquotes);
-    font-family: var(--font-family-quotes);
 
-} */
+blockquote::before {
+	content:open-quote;
+	top: -10px;
+	float: left;
+	position: relative;
+    margin-left:-.8em;
+    font-size: 50px;
+    color: var(--blockquote-border)
+
+}
+
+blockquote::after {
+	float: right;
+	position: relative;
+	content:close-quote;
+	bottom: -5px;
+    margin-right:-.6em;
+    font-size: 30px;
+    color: var(--blockquote-border)
+
+}
 
 /* icons */
 .file-view-actions a:hover {
@@ -406,7 +479,7 @@ img {
 /* tags */
 /* text of the tag in editor */
 .cm-s-obsidian span.cm-hashtag-end {
-    color: var(--pre-code);
+    color: var(--text-tag);
     background-color: var(--tag-background);
     text-decoration: none;
     border-radius: 0 10px 10px 0px;
@@ -415,7 +488,7 @@ img {
 
 /* text of the actual hashtag in the editor */
 .cm-s-obsidian span.cm-hashtag-begin {
-    color: var(--pre-code);
+    color: var(--text-tag);
     background-color: var(--tag-background);
     text-decoration: none;
     border-radius: 10px 0 0 10px;
@@ -425,7 +498,7 @@ img {
 /* entire tag in preview */
 a.tag {
     font-style: normal;
-    color: var(--pre-code) !important;
+    color: var(--text-tag) !important;
     background-color: var(--tag-background);
     text-decoration: none;
     border-radius: 10px;
@@ -471,6 +544,9 @@ a.tag {
 /* quick switcher item currently selected */
 .suggestion-item.is-selected {
     background-color: var(--pre-code);
+    color: var(--text-headline-h1);
+    font-weight: middle;
+    font-style: italic;
 }
 
 /* condense line spacing on file explorer title list. also avoids character-level word breaks */
@@ -620,43 +696,6 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 /* headings */
 
 
-/* add some header prefix in preview
-h1::before {
-    content: 'H1 ';
-    font-size: 12px;
-    color: var(--text-faint)
-}
-
-h2::before {
-    content: 'H2 ';
-    font-size: 12px;
-    color: var(--text-faint)
-}
-
-h3::before {
-    content: 'H3 ';
-    font-size: 12px;
-    color: var(--text-faint)
-}
-
-h4::before {
-    content: 'H4 ';
-    font-size: 12px;
-    color: var(--text-faint)
-}
-
-h5::before {
-    content: 'H5 ';
-    font-size: 12px;
-    color: var(--text-faint)
-}
-
-h6::before {
-    content: 'H6 ';
-    font-size: 12px;
-    color: var(--text-faint)
-} */
-
 /* internal embedded link rendering in preview */
 .markdown-embed-title {
     font-weight: 600;
@@ -697,7 +736,7 @@ h6::before {
 }
 
 .theme-light .graph-view.color-line-highlight {
-    color: #337AB7;
+    color: var(--text-mark);
 }
 
 /*======Tag Pills========*/ 
@@ -734,6 +773,10 @@ h6::before {
 
 .tag[href^="#Soloist"] {
     background-color: orange;
+}
+
+.tag[href^="#Note"] {
+    background-color: yellowgreen;
 }
 
 /* to have andy matuschak mode
