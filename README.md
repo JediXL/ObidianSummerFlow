@@ -7,4 +7,5 @@ Copy obsidian.css to your note folder.
 ## Required Fonts:
 - SF Pro Display
 - Fira Code
+- American Typewriter
 
