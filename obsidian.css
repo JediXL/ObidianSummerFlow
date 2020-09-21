@@ -1,14 +1,15 @@
 .theme-light {
+    --background-primary: #ffffff;
     --text-content: #333;
     --text-faint: #B2B2B2;
-    --text-headline-h1: #f25142ce;
-    --text-headline-h2: #094067;
+    --text-headline-h1: #f25142f8;
+    --text-headline-h2: #0a88e2;
     --text-headline-h3: #9656a1;
     --text-headline-h4: #0ab2c9;
     --text-headline-h5: #333;
     --text-link: #B4B4B4;
     --text-a: #3da9fc;
-    --text-quotes: #413f3f;
+    --text-quotes: #033f68;
     --text-a-hover: #db4d52;
     --text-mark: #D3FFA4;
     --text-code: #04133b;
@@ -18,13 +19,56 @@
     --interactive-before: #65605e;
     --blockquote-border: #8bd3dd;
     --tag-background: #e44404d5;
-    --text-tag:#f8f8fa;
+    --text-tag: #f8f8fa;
     --interactive-accent-rgb: #db4d52;
-    --font-family-editor: SF Pro Display, "SF Pro Display";
-    --font-family-preview: SF Pro Display, "SF Pro Display";
+    --quote-background: #F7F9F9;
+    --font-family-editor: Fira Code,
+        "Fira Code";
+    --font-family-preview: Fira Code,
+        "Fira Code";
+    --font-family-code: Fira Code,
+    Source Code Pro,
+    monospace;
+    ;
+    --font-family-quotes: 
+    Source Code Pro,
+    monospace;
+
+}
+
+.theme-dark {
+    --background-primary: #01090eb9;
+    --background-secondary: #01090eb9;
+    --background-secondary-alt: #01090eb9;
+    --text-content: rgb(76, 191, 245);
+    --text-faint: #effbfc;
+    --text-headline-h1: #f53302;
+    --text-headline-h2: #3ca7f3;
+    --text-headline-h3: #9f4bee;
+    --text-headline-h4: #3dd5e9;
+    --text-headline-h5: #333;
+    --text-link: #0cbff5;
+    --text-a: #f006aa;
+    --text-quotes: #f7f3f7;
+    --text-a-hover: #db4d52;
+    --text-mark: #20b3ec;
+    --text-code: #1e78eeea;
+    --pre-code: #ec09ec80;
+    --blockquotes: #6e8492;
+    --interactive-accent: #12c7c7;
+    --interactive-before: #65605e;
+    --blockquote-border: #e510f8;
+    --tag-background: #d304eed5;
+    --text-tag: #f8f8fa;
+    --interactive-accent-rgb: #db4d52;
+    --quote-background: #06014e;
+    --font-family-editor: Fira Code,
+        "Fira Code";
+    --font-family-preview: Fira Code,
+        "Fira Code";
     --font-family-code: Fira Code, "Fira Code";
     --font-family-quotes: American Typewriter,
-    "American Typewriter";
+        "American Typewriter";
 }
 
 /* Editor Headline */
@@ -212,51 +256,49 @@ a:not(.internal-link) {
 }
 
 /* blockquote editor */
-.cm-quote
-{
+.cm-quote {
     color: var(--text-quotes) !important;
-    font-style: italic !important;
     font-weight: bold;
+    font-family: var(--font-family-quotes);
+    font-size: larger;
 }
 
 /* blockquote preview */
-blockquote
-{
+blockquote {
     border-color: var(--blockquote-border) !important;
     border-top-width: 0px !important;
     border-bottom-width: 0px !important;
     border-right-width: 0px !important;
     border-left-width: 0px !important;
-    font-style: italic !important;
+    /* font-weight: bold; */
+    /* font-style: italic !important; */
     color: var(--text-quotes) !important;
-    font-size: medium;
-    quotes:"\201C""\201D""\2018""\2019";
-    background:#F7F9F9;
+    font-size: larger;
+    quotes: "\201C""\201D""\2018""\2019";
+    background: var(--quote-background) !important;
     font-family: var(--font-family-quotes);
 }
 
 
 
 blockquote::before {
-	content:open-quote;
-	top: -10px;
-	float: left;
-	position: relative;
-    margin-left:-.8em;
+    content: open-quote;
+    top: -10px;
+    float: left;
+    position: relative;
+    margin-left: -.8em;
     font-size: 50px;
     color: var(--blockquote-border)
-
 }
 
 blockquote::after {
-	float: right;
-	position: relative;
-	content:close-quote;
-	bottom: -5px;
-    margin-right:-.6em;
+    float: right;
+    position: relative;
+    content: close-quote;
+    bottom: -5px;
+    margin-right: -.6em;
     font-size: 30px;
     color: var(--blockquote-border)
-
 }
 
 /* icons */
@@ -314,7 +356,8 @@ mark {
 
 /* editor list characters */
 .cm-formatting-list {
-    color: var(--blockquote-border) !important;
+    color: var(--text-a) !important;
+    font-weight: bold;
 
 }
 
@@ -324,15 +367,15 @@ ul {
 }
 
 li>p {
-    display: inline-block;
+    display: inline;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 ul li:not(.task-list-item)::before {
     content: "•";
-    color: var(--blockquote-border);
-    display: inline-block;
+    color: var(--pre-code);
+    /* display: inline-block; */
     width: 1em;
     margin-left: -1em;
     padding: 0;
@@ -362,10 +405,10 @@ ol>li:not(.task-list-item)::before,
 ul ol>li:not(.task-list-item)::before,
 ul ul ol>li:not(.task-list-item)::before,
 ul ul ul ol>li:not(.task-list-item)::before {
-    content: "."counter(li);
+    content: counter(li)".";
     color: var(--blockquote-border);
     font-weight: normal;
-    display: inline-block;
+    /* display: inline-block; */
     width: 1em;
     margin-left: -1.5em;
     margin-right: 0.5em;
@@ -642,12 +685,33 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 /******************/
 
 /* normal text outside of headings and code */
-.cm-s-obsidian {
+.theme-light .cm-s-obsidian {
     font-family: var(--font-family-editor);
     font-size: 15px;
     color: var(--text-content);
+    /* padding-left: 10% !important;
+    padding-right: 10% !important; */
+    padding-top: 5px;
     padding-left: 10% !important;
     padding-right: 10% !important;
+}
+
+.theme-dark .cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    /* padding-left: 10% !important;
+    padding-right: 10% !important; */
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+
 }
 
 .mod-single-child .cm-s-obsidian {
@@ -656,6 +720,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     color: var(--text-content);
     padding-left: 30% !important;
     padding-right: 30% !important;
+    background-color: transparent !important;
 }
 
 
@@ -677,12 +742,60 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 /******************/
 
 /* normal text outside of headings and code */
-.markdown-preview-view {
+.theme-light .markdown-preview-view {
     font-family: var(--font-family-preview);
     font-size: 15px;
     color: var(--text-content);
     padding-left: 10% !important;
     padding-right: 10% !important;
+}
+
+.theme-dark .markdown-preview-view {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.theme-dark .view-content {
+    height: 100%;
+    width: 100%;
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.theme-dark .nav-files-container {
+    background-color: var(--background-primary) !important;
+}
+
+.theme-dark .workspace-leaf-content {
+    background-color: var(--background-primary) !important;
+}
+
+.theme-dark .workspace-tab-header.is-active{
+    background-color: var(--background-primary) !important;
+}
+
+
+
+/* .theme-dark .workspace-tab-header-inner-icon {
+    background-color: var(--background-primary) !important;
+}  */
+
+.theme-light .view-content {
+    height: 100%;
+    width: 100%;
 }
 
 .mod-single-child .markdown-preview-view {
@@ -709,7 +822,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 }
 
 /* Graph View */
-
+/* light */
 .theme-light .graph-view.color-fill {
     color: #7b7e7e;
 }
@@ -727,19 +840,44 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     color: var(--text-content);
 }
 
-.theme-dark .graph-view.color-text {
-    color: rgba(253, 215, 85);
-}
 
 .theme-light .graph-view.color-fill-highlight {
     color: rgb(216, 63, 17);
 }
 
 .theme-light .graph-view.color-line-highlight {
-    color: var(--text-mark);
+    color: greenyellow;
 }
 
-/*======Tag Pills========*/ 
+/* dark */
+.theme-dark .graph-view.color-fill {
+    color: #7b7e7e;
+}
+
+
+.theme-dark .graph-view.color-circle {
+    color: rgb(164, 2, 170);
+}
+
+.theme-dark .graph-view.color-line {
+    color: #093f75;
+}
+
+.theme-dark .graph-view.color-text {
+    color: var(--text-content);
+}
+
+
+.theme-dark .graph-view.color-fill-highlight {
+    color: rgb(216, 63, 17);
+}
+
+.theme-dark .graph-view.color-line-highlight {
+    color: rgb(164, 2, 170);
+}
+
+
+/*======Tag Pills========*/
 .tag {
     background-color: var(--text-accent);
     border: none;
@@ -779,8 +917,10 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     background-color: yellowgreen;
 }
 
-/* to have andy matuschak mode
-.workspace-split.mod-vertical { overflow-x:auto; }
+
+
+
+/* to have andy matuschak mode */
+/* .workspace-split.mod-vertical { overflow-x:auto; }
 .workspace-leaf, .workspace-split > .workspace-split { min-width: 500px; min-height: 500px; }
-.workspace-split.mod-horizontal { overflow-y: auto; }
-*/
+.workspace-split.mod-horizontal { overflow-y: auto; } */
