@@ -1,4 +1,4 @@
 
 ## How to use
-Copy obsidian.css to your note folder.
+Copy css file to your theme folder, and chose SummerFlow in the Appearance setting.
 
