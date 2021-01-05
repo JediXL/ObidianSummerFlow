@@ -1,0 +1,923 @@
+.theme-light {
+    --text-content: #333;
+    --text-headline-h1: #f25142f8;
+    --text-headline-h2: #0a88e2;
+    --text-headline-h3: #9656a1;
+    --text-headline-h4: #0ab2c9;
+    --text-headline-h5: #333;
+    --text-link: #B4B4B4;
+    --text-a: #3da9fc;
+    --text-quotes: #033f68;
+    --text-a-hover: #db4d52;
+    --text-mark: #D3FFA4;
+    --text-code: #04133b;
+    --pre-code: #ffffff80;
+    --blockquotes: #0995f3;
+    --interactive-before: #65605e;
+    --blockquote-border: #8bd3dd;
+    --tag-background: #e44404d5;
+    --text-tag: #f8f8fa;
+    --quote-background: #F7F9F9;
+    --font-family-editor: Fira Code,
+        "Fira Code";
+    --font-family-preview: Fira Code,
+        "Fira Code";
+    --font-family-code: Fira Code,
+    Source Code Pro,
+    monospace;
+    ;
+    --font-family-quotes: 
+    Source Code Pro,
+    monospace;
+
+}
+
+.theme-dark {
+    --text-content: rgb(76, 191, 245);
+    --text-headline-h1: #f53302;
+    --text-headline-h2: #3ca7f3;
+    --text-headline-h3: #9f4bee;
+    --text-headline-h4: #3dd5e9;
+    --text-headline-h5: #333;
+    --text-link: #0cbff5;
+    --text-a: #f006aa;
+    --text-quotes: #f7f3f7;
+    --text-a-hover: #db4d52;
+    --text-mark: #20b3ec;
+    --text-code: #1e78eeea;
+    --pre-code: #ec09ec80;
+    --blockquotes: #6e8492;
+    --interactive-before: #65605e;
+    --blockquote-border: #e510f8;
+    --tag-background: #d304eed5;
+    --text-tag: #f8f8fa;
+    --quote-background: #06014e;
+    --font-family-editor: Fira Code,
+        "Fira Code";
+    --font-family-preview: Fira Code,
+        "Fira Code";
+    --font-family-code: Fira Code, "Fira Code";
+    --font-family-quotes: American Typewriter,
+        "American Typewriter";
+}
+
+/* Editor Headline */
+
+.cm-header-1 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-headline-h1);
+}
+
+.cm-header-2 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text-headline-h2);
+}
+
+.cm-header-3 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-headline-h3);
+}
+
+.cm-header-4 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-headline-h4);
+}
+
+.cm-header-5 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-headline-h5);
+}
+
+.cm-header-6 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-headline-h5);
+}
+
+/* Preview Headline */
+.markdown-preview-view h1 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-headline-h1);
+}
+
+.markdown-preview-view h2 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text-headline-h2);
+}
+
+.markdown-preview-view h3 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-headline-h3);
+}
+
+.markdown-preview-view h4 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-headline-h4);
+}
+
+.markdown-preview-view h5 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-headline-h5);
+}
+
+.markdown-preview-view h6 {
+    font-family: var(--font-family-preview);
+    font-weight: 500 !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-headline-h5);
+}
+
+/* add some header suffix in preview */
+h1::after {
+    content: 'H1 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h2::after {
+    content: 'H2 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h3::after {
+    content: 'H3 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h4::after {
+    content: 'H4 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h5::after {
+    content: 'H5 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+}
+
+h6::after {
+    content: 'H6 ';
+    font-size: 12px;
+    color: var(--text-faint);
+    float: right;
+    position: relative;
+    margin-left: -.8em;
+
+}
+
+
+/* Links */
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link {
+    color: var(--text-a) !important;
+    text-decoration: none !important;
+    font-family: var(--font-family-preview) !important;
+
+}
+
+a.view-action {
+    color: var(--text-faint) !important;
+}
+
+/* link hover color */
+a:hover,
+.internal-link:hover {
+    color: var(--text-a-hover) !important;
+    text-decoration: none !important;
+}
+
+/* make external links italics to differentiate */
+a:not(.internal-link) {
+    font-style: italic;
+}
+
+/* blockquote editor */
+.cm-quote {
+    color: var(--text-quotes) !important;
+    font-weight: bold;
+    font-family: var(--font-family-quotes);
+    font-size: larger;
+}
+
+/* blockquote preview */
+blockquote {
+    border-color: var(--blockquote-border) !important;
+    border-top-width: 0px !important;
+    border-bottom-width: 0px !important;
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+    /* font-weight: bold; */
+    /* font-style: italic !important; */
+    color: var(--text-quotes) !important;
+    font-size: larger;
+    quotes: "\201C""\201D""\2018""\2019";
+    background: var(--quote-background) !important;
+    font-family: var(--font-family-quotes);
+}
+
+
+
+blockquote::before {
+    content: open-quote;
+    top: -10px;
+    float: left;
+    position: relative;
+    margin-left: -.8em;
+    font-size: 50px;
+    color: var(--blockquote-border)
+}
+
+blockquote::after {
+    float: right;
+    position: relative;
+    content: close-quote;
+    bottom: -5px;
+    margin-right: -.6em;
+    font-size: 30px;
+    color: var(--blockquote-border)
+}
+
+/* icons */
+.file-view-actions a:hover {
+    color: var(--text-content) !important;
+}
+
+.view-action.mod-pin-leaf.is-active {
+    color: var(--text-a) !important;
+}
+
+.file-view-actions a {
+    color: var(--text-faint) !important;
+}
+
+/* Special Texts */
+strong,
+.cm-strong {
+    color: var(--tax-normal);
+    font-weight: 900 !important;
+}
+
+em {
+    color: var(--tax-normal);
+}
+
+s {
+    color: var(--tag-background);
+}
+
+mark {
+    background-color: var(--text-mark) !important;
+    color: var(--text-content);
+    padding: 2px 3px 2px 3px;
+}
+
+
+/* editor markdown colors */
+.cm-tag,
+.cm-strikethrough,
+.cm-formatting-strong,
+.cm-formatting-em,
+.cm-formatting-code {
+    color: var(--text-code) !important;
+    font-family: var(--font-family-code) !important;
+}
+
+.cm-formatting.cm-formatting-highlight.cm-highlight {
+    background-color: var(--text-mark) !important;
+}
+
+.cm-highlight {
+    background-color: var(--text-mark) !important;
+}
+
+/* editor list characters */
+.cm-formatting-list {
+    color: var(--text-a) !important;
+    font-weight: bold;
+
+}
+
+/* bullet lists */
+ul {
+    list-style: none;
+}
+
+li>p {
+    display: inline;
+    /* margin-top: -2em;
+    margin-bottom: 0; */
+
+}
+
+ul li:not(.task-list-item)::before {
+    content: "•";
+    color: var(--pre-code);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-top: 1em;
+    padding: 0;
+    /* font-weight: bold; */
+    text-shadow: 0 0 0.5em var(--accent-2);
+    
+}
+
+ul ul li:not(.task-list-item)::before {
+    content: "";
+    margin-left: -1em;
+    list-style: none;
+} 
+
+ul ul ul li:not(.task-list-item)::before {
+    content: "•";
+    list-style: none;
+} */
+
+/* numbered lists */
+ol {
+    list-style: none;
+    counter-reset: li
+}
+
+ol>li {
+    counter-increment: li;
+    
+}
+
+ol>li:not(.task-list-item)::before,
+ul ol>li:not(.task-list-item)::before,
+ul ul ol>li:not(.task-list-item)::before,
+ul ul ul ol>li:not(.task-list-item)::before {
+    /* content: counter(li)"."; */
+    color: var(--blockquote-border);
+    font-weight: normal;
+    /* display: inline-block; */
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl;
+    word-wrap: none;
+    overflow: visible;
+    word-break: keep-all;
+
+}
+
+/* task lists */
+.markdown-preview-view .task-list-item-checkbox {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 1px solid var(--tag-background);
+    border-radius: 3px;
+    position: relative;
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0;
+    cursor: pointer;
+    color: var(--text-content);
+    font-weight: 600;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    font-size: 1em;
+    line-height: 1em;
+    width: 1.1em;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* code blocks preview */
+pre code {
+    padding: 20px !important;
+    line-height: normal;
+    display: block;
+    background-color: var(--pre-code) !important;
+    color: var(--text-code) !important;
+    font-family: var(--font-family-code) !important;
+}
+
+.markdown-preview-view pre {
+    padding: 0px !important;
+}
+
+/* in-line code editor*/
+code,
+.cm-inline-code {
+    background-color: var(--pre-code) !important;
+    color: var(--text-content) !important;
+    bottom: 0px !important;
+    padding: 1px;
+    font-family: var(--font-family-code) !important;
+}
+
+/* code and code blocks for preview */
+.markdown-preview-view code {
+    font-size: 13.5px;
+    font-family: var(--font-family-code) !important;
+}
+
+/* tables */
+
+th {
+    font-weight: 800 !important;
+}
+
+thead {
+    border-bottom: 3px solid var(--background-modifier-border);
+}
+
+.table {
+    background-color: var(--background-secondary-alt);
+    border: 1px solid var(--background-modifier-border);
+    padding: 4px;
+    line-height: normal;
+    display: block;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* embedded images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* horizontal line in preview */
+.markdown-preview-view hr {
+    background-color: var(--text-link);
+}
+
+/* checkboxes */
+.markdown-preview-view .task-list-item-checkbox {
+    top: 0px;
+}
+
+/* match cursor color to theme */
+.CodeMirror-cursor {
+    border-left: 2px solid var(--blockquote-border);
+    display: inline;
+}
+
+/* tags */
+/* text of the tag in editor */
+.cm-s-obsidian span.cm-hashtag-end {
+    color: var(--text-tag);
+    background-color: var(--tag-background);
+    text-decoration: none;
+    border-radius: 0 10px 10px 0px;
+    padding: 1px 5px 1px 0px;
+}
+
+/* text of the actual hashtag in the editor */
+.cm-s-obsidian span.cm-hashtag-begin {
+    color: var(--text-tag);
+    background-color: var(--tag-background);
+    text-decoration: none;
+    border-radius: 10px 0 0 10px;
+    padding: 1px 0px 1px 5px;
+}
+
+/* entire tag in preview */
+a.tag {
+    font-style: normal;
+    color: var(--text-tag) !important;
+    background-color: var(--tag-background);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1px 5px 1px 5px;
+}
+
+/*************/
+/* side dock */
+/*************/
+
+/* side dock text, like file names and backlink context */
+.side-dock-panels-container * {
+    font-size: 13px !important;
+}
+
+/* side dock titles at top */
+.side-dock-title {
+
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+
+/* hover actions on side dock navigation */
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-tab-inner:hover,
+.side-dock-ribbon-action:hover,
+.side-dock-ribbon-action.is-active:hover,
+.nav-action-button:hover,
+.side-dock-collapse-btn:hover {
+    color: var(--text-a);
+}
+
+/* non-hover actions on side dock navigation */
+.side-dock-ribbon-tab,
+.side-dock-ribbon-tab-inner,
+.side-dock-ribbon-action,
+.side-dock-ribbon-action.is-active,
+.nav-action-button,
+.side-dock-collapse-btn {
+    color: var(--text-faint);
+}
+
+/* quick switcher item currently selected */
+.suggestion-item.is-selected {
+    background-color: var(--pre-code);
+    color: var(--text-headline-h1);
+    font-weight: middle;
+    font-style: italic;
+}
+
+/* condense line spacing on file explorer title list. also avoids character-level word breaks */
+.nav-file-title-content,
+.search-result-file-title,
+.search-result-file-match {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: normal !important;
+    word-break: keep-all;
+}
+
+/* styling for title that is selected in filer explorer */
+.nav-file.is-active>.nav-file-title {
+    background-color: var(--pre-code);
+    color: var(--text-a);
+    border-color: var(--blockquote-border);
+    border-width: 0px 0px 0px 3px;
+    border-radius: 1px;
+}
+
+/* text color of non-selected files in sidebar */
+.nav-file-title,
+.search-result-file-match {
+    color: var(--text-faint);
+}
+
+.search-result-file-title {
+    color: var(--text-muted);
+}
+
+/* color and background of titles hovered over in side bars */
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover,
+.search-result-file-match:hover,
+.search-result-file-title:hover,
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+    background-color: var(--pre-code);
+    color: var(--text-content);
+}
+
+/* clean up side bar empty state (e.g. unlinked mentions) */
+.search-empty-state {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: normal;
+}
+
+/* to have sidebar hide and then reveal on hover */
+.app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover),
+.app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
+    width: 0px !important;
+}
+
+/* font for everything outside of editor/preview panes */
+/* .app-container {
+    font-family: var(--font-family-preview);
+} */
+
+.status-bar-item {
+    font-family: var(--font-family-preview);
+    font-size: 12px;
+}
+
+/******************/
+/* settings popup */
+/******************/
+
+/* left hand side section non-selected section */
+.vertical-tab-header,
+.vertical-tab-nav-item {
+    background-color: var(--background-primary);
+    border-color: var(--text-faint);
+    border-width: 2px;
+}
+
+/* left hand side section selected section */
+.vertical-tab-nav-item.is-active {
+    background-color: var(--pre-code);
+    border-color: var(--blockquote-border);
+    border-width: 5px;
+}
+
+/* in settings menu to show hot key mapping */
+.setting-hotkey {
+    background-color: var(--pre-code);
+}
+
+/******************/
+/* editor section */
+/******************/
+
+/* normal text outside of headings and code */
+.theme-light .cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-top: 10% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+
+.theme-dark .cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 10% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+
+}
+
+.mod-single-child .cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-left: 30% !important;
+    padding-right: 30% !important;
+    background-color: transparent !important;
+}
+
+.cm-string,
+.cm-formatting-task,
+.CodeMirror-guttermarker-subtle {
+    color: var(--text-link) !important;
+    /* padding-top: 30% !important; */
+}
+
+
+/* remote secondary scroll bar in editor that comes from adding variable padding */
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/******************/
+/* preview section */
+/******************/
+
+/* normal text outside of headings and code */
+.theme-light .markdown-preview-view {
+    font-family: var(--font-family-preview);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    padding-top: 10% !important;
+}
+
+.theme-dark .markdown-preview-view {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-top: 10% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.theme-dark .view-content {
+    height: 97%;
+    width: 100%;
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
+    background-size: auto 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+
+.theme-dark .nav-files-container {
+    background-color: var(--background-primary) !important;
+}
+
+.theme-dark .workspace-leaf-content {
+    background-color: var(--background-primary) !important;
+}
+
+.theme-dark .workspace-tab-header.is-active{
+    background-color: var(--background-primary) !important;
+}
+
+.theme-dark .workspace-tab-header-inner-icon {
+    background-color: var(--background-primary) !important;
+} 
+
+.theme-light .view-content {
+    height: 97%;
+    width: 100%;
+}
+
+.mod-single-child .markdown-preview-view {
+    font-family: var(--font-family-preview);
+    font-size: 15px;
+    color: var(--text-content);
+    padding-left: 30% !important;
+    padding-right: 30% !important;
+}
+
+/* headings */
+
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title {
+    font-weight: 600;
+}
+
+.markdown-embed {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+/* Graph View */
+/* light */
+.theme-light .graph-view.color-fill {
+    color: #7b7e7e;
+}
+
+
+.theme-light .graph-view.color-circle {
+    color: rgb(216, 63, 17);
+}
+
+.theme-light .graph-view.color-line {
+    color: #dedfe0;
+}
+
+.theme-light .graph-view.color-text {
+    color: var(--text-content);
+}
+
+
+.theme-light .graph-view.color-fill-highlight {
+    color: rgb(216, 63, 17);
+}
+
+.theme-light .graph-view.color-line-highlight {
+    color: greenyellow;
+}
+
+/* dark */
+.theme-dark .graph-view.color-fill {
+    color: #7b7e7e;
+}
+
+
+.theme-dark .graph-view.color-circle {
+    color: rgb(164, 2, 170);
+}
+
+.theme-dark .graph-view.color-line {
+    color: #093f75;
+}
+
+.theme-dark .graph-view.color-text {
+    color: var(--text-content);
+}
+
+
+.theme-dark .graph-view.color-fill-highlight {
+    color: rgb(216, 63, 17);
+}
+
+.theme-dark .graph-view.color-line-highlight {
+    color: rgb(164, 2, 170);
+}
+
+
+/*======Tag Pills========*/
+.tag {
+    background-color: var(--text-accent);
+    border: none;
+    color: white;
+    font-size: 11px;
+    padding: 1px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 0px;
+    cursor: pointer;
+    border-radius: 14px;
+}
+
+.tag:hover {
+    color: white;
+    background-color: var(--text-accent-hover);
+}
+
+.tag[href^="#Book"] {
+    background-color: #4d3ca6;
+}
+
+.tag[href^="#Product"] {
+    background-color: red;
+}
+
+.tag[href^="#Ideas"] {
+    background-color: green;
+}
+
+.tag[href^="#Soloist"] {
+    background-color: orange;
+}
+
+.tag[href^="#Note"] {
+    background-color: yellowgreen;
+}
+
+
+
+
+/* to have andy matuschak mode */
+/* .workspace-split.mod-vertical { overflow-x:auto; }
+.workspace-leaf, .workspace-split > .workspace-split { min-width: 500px; min-height: 500px; }
+.workspace-split.mod-horizontal { overflow-y: auto; } */
