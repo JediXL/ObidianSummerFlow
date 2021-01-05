@@ -688,9 +688,9 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     font-family: var(--font-family-editor);
     font-size: 15px;
     color: var(--text-content);
-    padding-top: 10% !important;
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-top: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
 }
 
 .theme-dark .cm-s-obsidian {
@@ -702,10 +702,10 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     background-size: auto 100vh;
     background-position: top;
     background-repeat: no-repeat;
-    position: relative;
-    padding-top: 10% !important;
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    /* position: relative; */
+    padding-top: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
 
 }
 
@@ -731,6 +731,15 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     display: none;
 }
 
+.CodeMirror-sizer {
+    margin-left: 48px !important;
+    padding: 0%;
+    position: relative;
+    
+}
+
+
+
 /******************/
 /* preview section */
 /******************/
@@ -740,18 +749,18 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
     font-family: var(--font-family-preview);
     font-size: 15px;
     color: var(--text-content);
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-    padding-top: 10% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    padding-top: 0% !important;
 }
 
 .theme-dark .markdown-preview-view {
     font-family: var(--font-family-editor);
     font-size: 15px;
     color: var(--text-content);
-    padding-top: 10% !important;
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-top: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
     background-color: transparent !important;
     background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
     background-size: auto 100vh;
@@ -761,7 +770,7 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 }
 
 .theme-dark .view-content {
-    height: 97%;
+    height: 96%;
     width: 100%;
     background-color: transparent !important;
     background-image: linear-gradient(to bottom, #01012b 75%, #3d0b43);
